@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo de Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div class="screen" id="login-screen">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Senha">
+        <button onclick="navigateTo('dashboard-screen')">Entrar</button>
+        <a href="#">Esqueci minha senha</a>
+    </div>
+
+    <!-- Tela de Dashboard -->
+    <div class="screen" id="dashboard-screen" style="display: none;">
+        <h2>Dashboard</h2>
+        <button onclick="navigateTo('profile-screen')">Ver Perfil</button>
+        <button>Configurações</button>
+        <button onclick="navigateTo('login-screen')">Sair</button>
+    </div>
+
+    <!-- Tela de Detalhes -->
+    <div class="screen" id="profile-screen" style="display: none;">
+        <h2>Perfil do Usuário</h2>
+        <p>Detalhes do perfil do usuário aqui.</p>
+        <button onclick="navigateTo('dashboard-screen')">Voltar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
